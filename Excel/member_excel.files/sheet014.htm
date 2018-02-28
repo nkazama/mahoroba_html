@@ -1,0 +1,4084 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 12">
+<link id=Main-File rel=Main-File href="../member_excel.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.51in;
+	mso-footer-margin:.51in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:6.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-char-type:katakana;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(13);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../member_excel.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink=purple>
+
+<table border=0 cellpadding=0 cellspacing=0 width=1126 style='border-collapse:
+ collapse;table-layout:fixed;width:845pt'>
+ <col width=72 style='width:54pt'>
+ <col width=14 style='mso-width-source:userset;mso-width-alt:448;width:11pt'>
+ <col width=607 style='mso-width-source:userset;mso-width-alt:19424;width:455pt'>
+ <col class=xl284 width=433 style='mso-width-source:userset;mso-width-alt:13856;
+ width:325pt'>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 width=72 style='height:13.5pt;width:54pt'></td>
+  <td width=14 style='width:11pt'></td>
+  <td width=607 style='width:455pt'></td>
+  <td class=xl284 width=433 style='width:325pt'></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl260 style='height:14.25pt'>Module1</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>1</td>
+  <td class=xl261>　</td>
+  <td class=xl264>Sub 入力確定()</td>
+  <td class=xl284>「<ruby>入力<span style='display:none'><rt>ニュウリョク</rt></span></ruby><ruby>表<span
+  style='display:none'><rt>ヒョウ</rt></span></ruby>」シートの<ruby>入力<span
+  style='display:none'><rt>ニュウリョク</rt></span></ruby><ruby>確定<span
+  style='display:none'><rt>カクテイ</rt></span></ruby>した<ruby>時<span
+  style='display:none'><rt>トキ</rt></span></ruby>のマクロ</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>2</td>
+  <td class=xl262>　</td>
+  <td class=xl267>' データ抽出 Macro</td>
+  <td class=xl284>　'　はコメントで<ruby>動作<span style='display:none'><rt>ドウサ</rt></span></ruby>とは<ruby>関係<span
+  style='display:none'><rt>カンケイ</rt></span></ruby>なし</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>3</td>
+  <td class=xl262>　</td>
+  <td class=xl267>' マクロ記録日 : 2009/11/7<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 :<span style='mso-spacerun:yes'>&nbsp; </span>.</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>4</td>
+  <td class=xl262>　</td>
+  <td class=xl267>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>5</td>
+  <td class=xl262>　</td>
+  <td class=xl267>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>6</td>
+  <td class=xl262>　</td>
+  <td class=xl267>' シート名「大和」にデータ抽出書き込み</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>7</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284>１５６<ruby>行<span style='display:none'><rt>ギョウ</rt></span></ruby><ruby>目<span
+  style='display:none'><rt>メ</rt></span></ruby>までの<ruby>動作<span
+  style='display:none'><rt>ドウサ</rt></span></ruby><ruby>間<span style='display:
+  none'><rt>カン</rt></span></ruby>でシート<ruby>表示<span style='display:none'><rt>ヒョウジ</rt></span></ruby>が<ruby>変<span
+  style='display:none'><rt>カ</rt></span></ruby>わるのを<ruby>停<span
+  style='display:none'><rt>ト</rt></span></ruby>める</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>8</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>9</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Unprotect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'入力表シート保護の解除</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>10</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;大和&quot;).Unprotect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>11</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;相模原&quot;).Unprotect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>12</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;個人結果&quot;).Unprotect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>13</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>14</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>15</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B3:L110&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>16</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.AutoFilter Field:=3, Criteria1:=&quot;大和&quot;<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'大和 抽出　オートフェルタ</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>17</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>18</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B4:L111&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'コピー範囲</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>19</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>20</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54">'コピー先</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>21</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B7&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54">'コピー位置</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>22</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone,
+  SkipBlanks _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>23</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>:=False, Transpose:=False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>24</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>25</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A1&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>26</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>27</td>
+  <td class=xl262>　</td>
+  <td class=xl268><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;大和&quot;).Protect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>28</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>29</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>30</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>31</td>
+  <td class=xl262>　</td>
+  <td class=xl268><span style='mso-spacerun:yes'>&nbsp;</span>'<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;大和&quot;).Protect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>32</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>33</td>
+  <td class=xl262>　</td>
+  <td class=xl268><span style='mso-spacerun:yes'>&nbsp;</span>'
+  シート名「相模原」にデータ抽出書き込み</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>34</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>35</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>36</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B3:L110&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>37</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.AutoFilter Field:=3, Criteria1:=&quot;相模原&quot;<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><font class="font54">'相模原
+  抽出　オートフェルタ</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>38</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>39</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B4:L111&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'コピー範囲</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>40</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>41</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span style='mso-spacerun:yes'>&nbsp;</span>'コピー先</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>42</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B7&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'コピー位置</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>43</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone,
+  SkipBlanks _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>44</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>:=False, Transpose:=False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>45</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>46</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A1&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>47</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>48</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;相模原&quot;).Protect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>49</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>50</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>51</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.AutoFilter<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'オートフィルター解除</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>52</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>53</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>54</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>55</td>
+  <td class=xl262>　</td>
+  <td class=xl267><span style='mso-spacerun:yes'>&nbsp;</span>'
+  シート名「個人結果」にデータ抽出書き込み</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>56</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>57</td>
+  <td class=xl262>　</td>
+  <td class=xl267><span style='mso-spacerun:yes'>&nbsp;</span>'<ruby>参<span
+  style='display:none'><rt>３</rt></span></ruby>段以下データ抽出</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>58</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>59</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B3:L110&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>60</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.AutoFilter Field:=4, Criteria1:=&quot;2&quot;<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'</font><ruby><font class="font54">参</font><span
+  style='display:none'><rt>３</rt></span></ruby><font class="font54">段以下(&quot;2&quot;)
+  抽出　オートフェルタ</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>61</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>62</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4:L111&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'コピー範囲</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>63</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>64</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;個人結果&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span style='mso-spacerun:yes'>&nbsp;</span>'コピー先</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>65</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>66</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>IF
+  Range(&quot;W4&quot;).Value = 0 Then</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>67</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>68</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B4&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'コピー位置</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>69</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone,
+  SkipBlanks _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>70</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>:=False, Transpose:=False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>71</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>72</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B4:V27&quot;).Select<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'コピーデータソート</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>73</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.Sort Key1:=Range(&quot;U4&quot;), Order1:=xlDescending,
+  Key2:=Range(&quot;B4&quot;) _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>74</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>, Order2:=xlAscending, Header:=xlGuess, OrderCustom:=1, MatchCase:= _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>75</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>False, Orientation:=xlTopToBottom, SortMethod:=xlPinYin, DataOption1:=
+  _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>76</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>xlSortNormal, DataOption2:=xlSortNormal</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>77</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>78</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>End
+  If</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>79</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>80</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>If
+  Range(&quot;W4&quot;).Value &gt; 0 Then</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=36 style='height:27.0pt'>
+  <td height=36 align=right style='height:27.0pt'>81</td>
+  <td class=xl262>　</td>
+  <td class=xl283 width=607 style='width:455pt'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>MsgBox
+  &quot;競射、遠近で順位が確定しています。「個人結果」の<ruby>参<span style='display:none'><rt>３</rt></span></ruby>段以下は上書きできません。&quot;,
+  vbExclamation, &quot;個人結果シートの<ruby>参<span style='display:none'><rt>３</rt></span></ruby>段以下確認&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>82</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>End
+  If</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>83</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>84</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>85</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>86</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>87</td>
+  <td class=xl262>　</td>
+  <td class=xl267><span style='mso-spacerun:yes'>&nbsp;</span>'女子データ抽出</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>88</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.AutoFilter Field:=4, Criteria1:=&quot;0&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>89</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>90</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4:L111&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>91</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>92</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;個人結果&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>93</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>94</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>IF
+  Range(&quot;W28&quot;).Value = 0 Then</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>95</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>96</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B28&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>97</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone,
+  SkipBlanks _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>98</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>:=False, Transpose:=False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>99</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>100</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B28:V67&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>101</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.Sort Key1:=Range(&quot;U28&quot;), Order1:=xlDescending,
+  Key2:=Range(&quot;B28&quot;) _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>102</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>, Order2:=xlAscending, Header:=xlGuess, OrderCustom:=1, MatchCase:= _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>103</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>False, Orientation:=xlTopToBottom, SortMethod:=xlPinYin, DataOption1:=
+  _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>104</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>xlSortNormal, DataOption2:=xlSortNormal</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>105</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>106</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>End
+  If</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>107</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>108</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>If
+  Range(&quot;W28&quot;).Value &gt; 0 Then</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=36 style='height:27.0pt'>
+  <td height=36 align=right style='height:27.0pt'>109</td>
+  <td class=xl262>　</td>
+  <td class=xl283 width=607 style='width:455pt'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>MsgBox
+  &quot;競射、遠近で順位が確定しています。「個人結果」の女子は上書きできません。&quot;, vbExclamation,
+  &quot;個人結果シートの女子確認&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>110</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>End
+  If</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>111</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl285 style='border-left:none'>　</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>112</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>113</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>114</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>115</td>
+  <td class=xl262>　</td>
+  <td class=xl267><span style='mso-spacerun:yes'>&nbsp;</span>'男子データ抽出</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>116</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.AutoFilter Field:=4, Criteria1:=&quot;1&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>117</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>118</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4:L111&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>119</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>120</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;個人結果&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>121</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>122</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>IF
+  Range(&quot;W69&quot;).Value = 0 Then</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>123</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>124</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B69&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>125</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone,
+  SkipBlanks _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>126</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>:=False, Transpose:=False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>127</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>128</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B69:V110&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>129</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Selection.Sort Key1:=Range(&quot;U69&quot;), Order1:=xlDescending,
+  Key2:=Range(&quot;B69&quot;) _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>130</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>, Order2:=xlAscending, Header:=xlGuess, OrderCustom:=1, MatchCase:= _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>131</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>False, Orientation:=xlTopToBottom, SortMethod:=xlPinYin, DataOption1:=
+  _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>132</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>xlSortNormal, DataOption2:=xlSortNormal</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>133</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;M4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>134</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>135</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>136</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>137</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>End
+  If</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>138</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>139</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>If
+  Range(&quot;W69&quot;).Value &gt; 0 Then</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=36 style='height:27.0pt'>
+  <td height=36 align=right style='height:27.0pt'>140</td>
+  <td class=xl262>　</td>
+  <td class=xl283 width=607 style='width:455pt'><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>MsgBox
+  &quot;競射、遠近で順位が確定しています。「個人結果」の男子は上書きできません。&quot;, vbExclamation,
+  &quot;個人結果シートの男子確認&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>141</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>End
+  If</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>142</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>143</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;個人結果&quot;).Protect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>144</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>145</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>146</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>147</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.AutoFilter<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font54">'オートフィルター解除</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>148</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>149</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>150</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>151</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>152</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Worksheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>153</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>154</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;C1&quot;).Value = &quot;&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>155</td>
+  <td class=xl262>　</td>
+  <td class=xl265>ActiveSheet.Protect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp; </span><font class="font55"><span
+  style='mso-spacerun:yes'>&nbsp;</span></font><font class="font54"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'入力表のシート保護</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>156</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>157</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>158</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'></td>
+  <td class=xl263>　</td>
+  <td class=xl266>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=3 style='height:13.5pt;mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl260 style='height:14.25pt'>Module2</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>1</td>
+  <td class=xl261>　</td>
+  <td class=xl264>Sub<span style='mso-spacerun:yes'>&nbsp;</span><ruby>参<span
+  style='display:none'><rt>３</rt></span></ruby>段以下順位決定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>2</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>3</td>
+  <td class=xl262>　</td>
+  <td class=xl281><span style='mso-spacerun:yes'>&nbsp;</span>参<ruby>段<span
+  style='display:none'><rt>３</rt></span></ruby>以下順位決定 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>4</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2009/11/10<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 :</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>5</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>6</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>7</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>8</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>9</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B4:T27&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>10</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>11</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Unprotect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font59"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'入力表シート保護の解除</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>12</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>13</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Sort Key1:=Range(&quot;T4&quot;), Order1:=xlDescending,
+  Key2:=Range(&quot;R4&quot;) _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>14</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>,
+  Order2:=xlAscending, Header:=xlGuess, OrderCustom:=1, MatchCase:= _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>15</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>False, Orientation:=xlTopToBottom, SortMethod:=xlPinYin, DataOption1:=
+  _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>16</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>xlSortNormal, DataOption2:=xlSortNormal</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>17</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>18</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Protect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font59"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'入力表のシート保護</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>19</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>20</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>MsgBox &quot;最終順位を確定しました。&quot;, vbOKOnly + _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>21</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>vbInformation, &quot;<ruby>参<span style='display:none'><rt>３</rt></span></ruby>段以下順位&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>22</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>SendKeys &quot;{ESC}&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>23</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>24</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;R4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>25</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>26</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 男子順位確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>27</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>28</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 男子順位確定 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>29</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2009/11/10<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 :</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>30</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>31</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>32</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>33</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>34</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B69:T110&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>35</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>36</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Unprotect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font37"><span style='mso-spacerun:yes'>&nbsp;</span></font><font
+  class="font59"><span style='mso-spacerun:yes'>&nbsp;</span>'入力表シート保護の解除</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>37</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>38</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Sort Key1:=Range(&quot;T69&quot;), Order1:=xlDescending,
+  Key2:=Range( _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>39</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>&quot;R69&quot;), Order2:=xlAscending, Header:=xlGuess,
+  OrderCustom:=1, MatchCase _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>40</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>:=False, Orientation:=xlTopToBottom, SortMethod:=xlPinYin,
+  DataOption1:= _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>41</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>xlSortNormal, DataOption2:=xlSortNormal</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>42</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>43</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Protect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font55"><span style='mso-spacerun:yes'>&nbsp;</span></font><font
+  class="font59"><span style='mso-spacerun:yes'>&nbsp;</span>'入力表のシート保護</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>44</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>45</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>MsgBox &quot;最終順位を確定しました。&quot;, vbOKOnly + _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>46</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>vbInformation, &quot;男子　順位&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>47</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>SendKeys &quot;{ESC}&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>48</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>49</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;R69&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>50</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>51</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 女子順位確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>52</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>53</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 女子順位確定 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>54</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2009/11/10<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 :</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>55</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>56</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>57</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>58</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>59</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;B28:T67&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>60</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>61</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Unprotect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font59"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'入力表シート保護の解除</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>62</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>63</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Sort Key1:=Range(&quot;T28&quot;), Order1:=xlDescending,
+  Key2:=Range( _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>64</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>&quot;R28&quot;), Order2:=xlAscending, Header:=xlGuess,
+  OrderCustom:=1, MatchCase _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>65</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>:=False, Orientation:=xlTopToBottom, SortMethod:=xlPinYin,
+  DataOption1:= _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>66</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>xlSortNormal, DataOption2:=xlSortNormal</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>67</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>68</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Protect<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font59"><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;</span>'入力表のシート保護</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>69</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>70</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>MsgBox &quot;最終順位を確定しました。&quot;, vbOKOnly + _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>71</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>vbInformation, &quot;女子　順位&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>72</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>SendKeys &quot;{ESC}&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>73</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>74</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;R28&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>75</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>76</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'></td>
+  <td class=xl263>　</td>
+  <td class=xl266>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=3 style='height:13.5pt;mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl260 style='height:14.25pt'>Module3</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>1</td>
+  <td class=xl261>　</td>
+  <td class=xl264>Sub シート保護の解除()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>2</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>3</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Unprotect</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>4</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>5</td>
+  <td class=xl262>　</td>
+  <td class=xl280><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>' MsgBox
+  &quot;このシートの保護が解除されました。&quot;, vbOKOnly + _</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>6</td>
+  <td class=xl262>　</td>
+  <td class=xl280><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>'<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>vbInformation, &quot;シート保護&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>7</td>
+  <td class=xl262>　</td>
+  <td class=xl280><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>'<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>SendKeys
+  &quot;{ESC}&quot;</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>8</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>9</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Dim
+  V As Variant</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>10</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>Dim
+  i As Integer</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>11</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>12</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span><font
+  class="font59"><span
+  style='mso-spacerun:yes'>&nbsp;</span>'最後の値として最初の値を入れてあるのがミソ</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>13</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>V =
+  Array(&quot;＊シート保護が解除されました。&quot;)</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>14</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>15</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>With
+  Range(&quot;C1&quot;)</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>16</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>For i = 0 To UBound(V) - 1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>17</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font59"><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>'現在の値が見つかれば、配列の次の値を設定</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>18</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>If .Value = V(i) Then</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>19</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>.Value = V(i + 1)</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>20</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Exit Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>21</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>End If</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>22</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;C1&quot;).Font.ColorIndex = 3</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>23</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>24</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Next</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>25</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><font class="font59"><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>'見つからなければ、配列の最初の値を設定</font></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>26</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>.Value = V(0)</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>27</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>28</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>End
+  With</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>29</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 align=right style='height:14.25pt'>30</td>
+  <td class=xl263>　</td>
+  <td class=xl266>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=3 style='height:13.5pt;mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl260 style='height:14.25pt'>Module4</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>1</td>
+  <td class=xl261>　</td>
+  <td class=xl264>Sub 入力表へ()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>2</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>3</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>4</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2009/11/12<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 :<span style='mso-spacerun:yes'>&nbsp; </span>.</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>5</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>6</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>7</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>8</td>
+  <td class=xl262>　</td>
+  <td class=xl280><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>' Beep</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>9</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>10</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>11</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 align=right style='height:14.25pt'>12</td>
+  <td class=xl263>　</td>
+  <td class=xl266>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=3 style='height:13.5pt;mso-ignore:colspan'></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl260 style='height:14.25pt'>Module7</td>
+  <td class=xl260></td>
+  <td></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>1</td>
+  <td class=xl261>　</td>
+  <td class=xl264>Sub 掲示用紙印刷1()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>2</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>3</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>4</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>5</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>6</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>7</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>8</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>9</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>10</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>11</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>12</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A7:L12&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>13</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>14</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>15</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>16</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>17</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>18</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>19</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A7:L12&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>20</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>21</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>22</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>23</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>24</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>25</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>26</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>27</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>28</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>29</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>30</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>31</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F16&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>32</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>33</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>34</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>35</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>36</td>
+  <td class=xl262>　</td>
+  <td class=xl269>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>37</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 掲示用紙印刷2()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>38</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>39</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>40</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>41</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>42</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>43</td>
+  <td class=xl262>　</td>
+  <td class=xl282>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>44</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>45</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>46</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>47</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>48</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A13:L18&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>49</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>50</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>51</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>52</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>53</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>54</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>55</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A13:L18&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>56</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>57</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>58</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>59</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>60</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>61</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>62</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>63</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>64</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>65</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>66</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>67</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F28&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>68</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>69</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>70</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>71</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>72</td>
+  <td class=xl262>　</td>
+  <td class=xl269>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>73</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 掲示用紙印刷3()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>74</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>75</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>76</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>77</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>78</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>79</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>80</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>81</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>82</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>83</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>84</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A19:L24&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>85</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>86</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>87</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>88</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>89</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>90</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>91</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A19:L24&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>92</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>93</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>94</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>95</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>96</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>97</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>98</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>99</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>100</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>101</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>102</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>103</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F40&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>104</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>105</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>106</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>107</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>108</td>
+  <td class=xl262>　</td>
+  <td class=xl269>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>109</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 掲示用紙印刷4()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>110</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>111</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>112</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>113</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>114</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>115</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>116</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>117</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>118</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>119</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>120</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A25:L30&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>121</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>122</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>123</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>124</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>125</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>126</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>127</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A25:L30&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>128</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>129</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>130</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>131</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>132</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>133</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>134</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>135</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>136</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>137</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>138</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>139</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F52&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>140</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>141</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>142</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>143</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>144</td>
+  <td class=xl262>　</td>
+  <td class=xl269>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>145</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 掲示用紙印刷5()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>146</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>147</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>148</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>149</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>150</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>151</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>152</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>153</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>154</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>155</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>156</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A31:L36&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>157</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>158</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>159</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>160</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>161</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>162</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>163</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A31:L36&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>164</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>165</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>166</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>167</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>168</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>169</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>170</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>171</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>172</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>173</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>174</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>175</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F64&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>176</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>177</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>178</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>179</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>180</td>
+  <td class=xl262>　</td>
+  <td class=xl269>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>181</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 掲示用紙印刷6()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>182</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>183</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>184</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>185</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>186</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>187</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>188</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>189</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>190</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>191</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>192</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A37:L42&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>193</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>194</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>195</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>196</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>197</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>198</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>199</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A37:L42&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>200</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>201</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>202</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>203</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>204</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>205</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>206</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>207</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>208</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>209</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>210</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>211</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F76&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>212</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>213</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>214</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>215</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>216</td>
+  <td class=xl262>　</td>
+  <td class=xl269>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>217</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 掲示用紙印刷7()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>218</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>219</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>220</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>221</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>222</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>223</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>224</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>225</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>226</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>227</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;相模原&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>228</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A43:L48&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>229</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>230</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>231</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>232</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>233</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>234</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>235</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A43:L48&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>236</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>237</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>238</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>239</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>240</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>241</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>242</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>243</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>244</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>245</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>246</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>247</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F88&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>248</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>249</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>250</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>251</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>252</td>
+  <td class=xl262>　</td>
+  <td class=xl269>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>253</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Sub 掲示用紙印刷8()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>254</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>255</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' 掲示用紙印刷1 Macro</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>256</td>
+  <td class=xl262>　</td>
+  <td class=xl281>' マクロ記録日 : 2011/11/19<span style='mso-spacerun:yes'>&nbsp;
+  </span>ユーザー名 : Michiru</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>257</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>258</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>259</td>
+  <td class=xl262>　</td>
+  <td class=xl281>'</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>260</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Call 入力確定()</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>261</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>262</td>
+  <td class=xl262>　</td>
+  <td class=xl265>　</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>263</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>264</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A55:L60&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>265</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>266</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>267</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A4&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>268</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>269</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>270</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;大和&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>271</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A49:L54&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>272</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>273</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Selection.Copy</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>274</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;印刷用入力&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>275</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;A10&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>276</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveSheet.Paste</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>277</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>278</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;掲示用印刷&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>279</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Application.CutCopyMode = False</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>280</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>ActiveWindow.SelectedSheets.PrintOut Copies:=1</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>281</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>282</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Sheets(&quot;入力表&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>283</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+  </span>Range(&quot;F100&quot;).Select</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>284</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>285</td>
+  <td class=xl262>　</td>
+  <td class=xl265>Application.ScreenUpdating = True</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>286</td>
+  <td class=xl262>　</td>
+  <td class=xl265><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 align=right style='height:13.5pt'>287</td>
+  <td class=xl262>　</td>
+  <td class=xl265>End Sub</td>
+  <td class=xl284></td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'></td>
+  <td class=xl263>　</td>
+  <td class=xl266>　</td>
+  <td class=xl284></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=72 style='width:54pt'></td>
+  <td width=14 style='width:11pt'></td>
+  <td width=607 style='width:455pt'></td>
+  <td width=433 style='width:325pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
