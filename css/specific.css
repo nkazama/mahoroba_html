@@ -43,13 +43,13 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========TEMPLATE LAYOUT======== */
 #top {
-   width:780px;
+   width:980px;
    margin:10px auto;
    border:1px solid #333;
 }
 
 #header {
-   width:780px;
+   width:980px;
 }
 
 #menu {
@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6 {
 
 #main {
    float:left;
-   width:740px;
+   width:540px;
    padding:10px;
 }
 
